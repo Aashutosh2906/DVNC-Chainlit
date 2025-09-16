@@ -1,0 +1,88 @@
+# Create custom CSS
+cat > public/custom.css << 'EOF'
+/* DVNC.ai Premium Styling */
+
+/* Background gradient */
+.MuiBox-root {
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+}
+
+/* Message styling */
+.message-content {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+/* Code blocks with Da Vinci style */
+pre {
+    background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+    border-left: 3px solid #D4AF37;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* Premium buttons */
+button {
+    background: linear-gradient(135deg, #D4AF37 0%, #B8961F 100%);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #D4AF37 0%, #B8961F 100%);
+    border-radius: 5px;
+}
+
+/* Animation for messages */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message {
+    animation: fadeInUp 0.4s ease-out;
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #D4AF37;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background: #D4AF37;
+    color: #0A0A0A;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #D4AF37;
+    padding: 8px;
+}
+EOF
+
+echo "✅ Created public/custom.css"
