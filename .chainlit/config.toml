@@ -1,0 +1,34 @@
+# Create the config file
+cat > .chainlit/config.toml << 'EOF'
+[project]
+# DVNC.ai Premium Configuration
+enable_telemetry = false
+
+[UI]
+name = "DVNC.ai"
+
+[UI.theme]
+# Premium dark theme with gold accents
+primary = "#D4AF37"
+primary_dark = "#B8961F"
+background = "#0A0A0A"
+paper = "#1A1A1A"
+text_primary = "#FFFFFF"
+text_secondary = "#B0B0B0"
+
+[features]
+multi_modal = true
+streaming = true
+
+[UI.theme.dark]
+primary = "#D4AF37"
+background = "#0A0A0A"
+paper = "#1A1A1A"
+
+[UI.theme.light]
+primary = "#8B7355"
+background = "#F5F5DC"
+paper = "#FFFFFF"
+EOF
+
+echo "✅ Created .chainlit/config.toml"
